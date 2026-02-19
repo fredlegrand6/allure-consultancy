@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
-  <!-- Stylized A with speech bubble / connection element -->
-  <g>
-    <!-- Main A shape -->
-    <path d="M20 44 L32 8 L44 44" stroke="#1A5C50" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- A crossbar -->
-    <line x1="24" y1="32" x2="40" y2="32" stroke="#1A5C50" stroke-width="3" stroke-linecap="round"/>
-    <!-- Speech bubble arc connecting from top of A -->
-    <path d="M32 8 Q48 4 48 16 Q48 24 40 26" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <!-- Small dot accent -->
-    <circle cx="48" cy="16" r="2.5" fill="#C9953C"/>
-  </g>
+<svg viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stylized geometric "A" mark -->
+  <path d="M8 48 L24 6 L40 48" stroke="#1A5C50" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="14" y1="34" x2="34" y2="34" stroke="#1A5C50" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Accent flourish -->
+  <path d="M24 6 Q42 1 43 14 Q43.5 22 36 25" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="43" cy="14" r="3" fill="#C9953C"/>
   <!-- Wordmark -->
-  <text x="60" y="32" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#1A5C50" letter-spacing="-0.5">Allure</text>
-  <text x="60" y="48" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#1A5C50" letter-spacing="2" opacity=".7">CONSULTANCY</text>
+  <text x="56" y="32" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#1A5C50" letter-spacing="-0.5">Allure</text>
+  <text x="56" y="50" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#6B7B75" letter-spacing="3">CONSULTANCY</text>
 </svg>

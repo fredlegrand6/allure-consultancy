@@ -3,972 +3,972 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Allure Consultancy — Strategie. Realisatie. Verandering.</title>
-<meta name="description" content="Allure Consultancy is specialist in verandercommunicatie, interne communicatie, omgevingscommunicatie en content strategie. Wij helpen organisaties effectief communiceren bij transities.">
+<title>Allure Consultancy — Marketing Bureau Rotterdam | SEO, Content & Webdesign</title>
+<meta name="description" content="Allure Consultancy is een data-gedreven marketing bureau in Rotterdam. Wij helpen bedrijven groeien met SEO, contentstrategie, social media en webdesign die meetbaar resultaat opleveren.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ========== RESET ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Inter',sans-serif;color:#1E2A38;background:#fff;line-height:1.65;overflow-x:hidden}
-a{text-decoration:none;color:inherit;transition:color .25s}
+body{font-family:'Inter',sans-serif;color:#1A1A1A;background:#FFFFFF;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit;transition:.3s}
 ul{list-style:none}
 img{max-width:100%;display:block}
 button,input,textarea,select{font-family:inherit;border:none;outline:none}
 button{cursor:pointer;background:none}
 
-/* ========== VARIABLES ========== */
 :root{
-  --teal:#1A5C50;
-  --teal-dark:#134840;
-  --teal-light:#237A6A;
-  --gold:#C9953C;
-  --gold-hover:#B5842F;
-  --sage:#E8F0ED;
-  --dark:#1E2A38;
-  --gray:#5F6B7A;
-  --gray-light:#CBD5E0;
-  --bg:#F8FAF9;
-  --white:#FFFFFF;
-  --shadow-sm:0 2px 8px rgba(30,42,56,.06);
-  --shadow:0 4px 24px rgba(30,42,56,.08);
-  --shadow-lg:0 16px 48px rgba(30,42,56,.1);
-  --radius:12px;
-  --radius-lg:20px;
-  --ease:cubic-bezier(.4,0,.2,1);
+--primary:#1A5C50;
+--primary-dark:#134840;
+--primary-light:#237A6A;
+--accent:#C9953C;
+--accent-hover:#B8862E;
+--dark-bg:#0B1D1A;
+--light-bg:#F5F7F4;
+--white:#FFFFFF;
+--text:#1A1A1A;
+--text-light:#6B7B75;
+--shadow-sm:0 2px 8px rgba(0,0,0,.06);
+--shadow:0 4px 20px rgba(0,0,0,.08);
+--shadow-lg:0 12px 40px rgba(0,0,0,.12);
+--radius:12px;
+--radius-lg:20px;
+--ease:cubic-bezier(.4,0,.2,1);
 }
 
-/* ========== UTILITIES ========== */
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-.section-label{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--teal);margin-bottom:12px}
-.section-label::before{content:'';width:20px;height:2px;background:var(--gold)}
-.section-title{font-size:clamp(1.8rem,3.8vw,2.8rem);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:16px;letter-spacing:-.02em}
-.section-sub{font-size:1.05rem;color:var(--gray);max-width:580px;line-height:1.75}
+.section-label{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--text);line-height:1.15;margin-bottom:16px;letter-spacing:-.02em}
+.section-sub{font-size:1.05rem;color:var(--text-light);max-width:600px;line-height:1.75}
 
-/* ========== ANIMATIONS ========== */
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+/* Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .fade-up.visible{opacity:1;transform:translateY(0)}
-.fade-up.d1{transition-delay:.1s}.fade-up.d2{transition-delay:.2s}
-.fade-up.d3{transition-delay:.3s}.fade-up.d4{transition-delay:.4s}
+.fade-up.d1{transition-delay:.1s}.fade-up.d2{transition-delay:.2s}.fade-up.d3{transition-delay:.3s}.fade-up.d4{transition-delay:.4s}
 
-/* ========== NAVBAR ========== */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .35s var(--ease)}
-.navbar.scrolled{background:rgba(255,255,255,.98);backdrop-filter:blur(16px);box-shadow:0 1px 16px rgba(30,42,56,.07);padding:12px 0}
-.navbar .container{display:flex;align-items:center;justify-content:space-between}
-.nav-logo{z-index:1001;display:flex;align-items:center}
-.nav-logo svg{height:40px;width:auto}
-.nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{font-size:.88rem;font-weight:500;color:var(--white);transition:color .25s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s var(--ease)}
-.nav-links a:hover::after{width:100%}
-.nav-links a:hover{color:var(--gold)}
-.navbar.scrolled .nav-links a{color:var(--dark)}
-.navbar.scrolled .nav-links a:hover{color:var(--teal)}
-.nav-cta{background:var(--gold)!important;color:var(--white)!important;padding:10px 24px;border-radius:999px;font-weight:600;font-size:.88rem;transition:all .3s var(--ease)}
-.nav-cta::after{display:none!important}
-.nav-cta:hover{background:var(--gold-hover)!important;transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,149,60,.3)}
+/* ===== NAVBAR ===== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);box-shadow:0 1px 12px rgba(0,0,0,.06);transition:all .3s var(--ease)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;z-index:1001}
+.nav-logo svg{height:38px;width:auto}
+.nav-center{display:flex;align-items:center;gap:32px}
+.nav-center a{font-size:.875rem;font-weight:500;color:var(--text);transition:.25s;position:relative}
+.nav-center a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:width .3s var(--ease)}
+.nav-center a:hover{color:var(--primary)}
+.nav-center a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-phone{font-size:.875rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px}
+.nav-phone svg{width:16px;height:16px;color:var(--primary)}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:999px;font-weight:600;font-size:.875rem;background:var(--accent);color:var(--white);transition:all .3s var(--ease)}
+.btn-cta:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,149,60,.35)}
 .hamburger{display:none;flex-direction:column;gap:5px;z-index:1001;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s var(--ease)}
-.navbar.scrolled .hamburger span{background:var(--dark)}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s var(--ease)}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-overlay{position:fixed;inset:0;background:var(--dark-bg);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+.mobile-overlay.open{opacity:1;pointer-events:all}
+.mobile-overlay a{font-size:1.3rem;font-weight:600;color:var(--white);transition:.25s}
+.mobile-overlay a:hover{color:var(--accent)}
 
-/* ========== HERO CAROUSEL ========== */
-.hero{position:relative;height:100vh;min-height:640px;overflow:hidden}
-.hero-slides{position:relative;width:100%;height:100%}
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease);display:flex;align-items:center}
-.hero-slide.active{opacity:1}
-.hero-slide::before{content:'';position:absolute;inset:0;z-index:1}
-.slide-bg{position:absolute;inset:0}
-.slide-1 .slide-bg{background:linear-gradient(135deg,#0F3D34 0%,#1A5C50 40%,#2D8B78 100%)}
-.slide-1::before{background:linear-gradient(to right,rgba(15,61,52,.85),rgba(26,92,80,.4))}
-.slide-2 .slide-bg{background:linear-gradient(135deg,#1E2A38 0%,#1A5C50 50%,#237A6A 100%)}
-.slide-2::before{background:linear-gradient(to right,rgba(30,42,56,.85),rgba(26,92,80,.3))}
-.slide-3 .slide-bg{background:linear-gradient(135deg,#134840 0%,#1A5C50 40%,#C9953C 150%)}
-.slide-3::before{background:linear-gradient(to right,rgba(19,72,64,.9),rgba(201,149,60,.15))}
-/* Subtle pattern overlay */
-.slide-bg::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
-.hero-content{position:relative;z-index:2;max-width:680px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 16px;border-radius:999px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
-.hero-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block}
-.hero h1{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:24px;letter-spacing:-.03em}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:40px;max-width:520px}
-.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.92rem;transition:all .3s var(--ease)}
-.btn svg{width:16px;height:16px}
-.btn-gold{background:var(--gold);color:var(--white)}
-.btn-gold:hover{background:var(--gold-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,149,60,.35)}
-.btn-outline-w{border:1.5px solid rgba(255,255,255,.3);color:var(--white)}
-.btn-outline-w:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.07);transform:translateY(-2px)}
-/* Slide indicators */
-.hero-dots{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px}
-.hero-dot{width:32px;height:3px;border-radius:2px;background:rgba(255,255,255,.3);cursor:pointer;transition:all .4s var(--ease)}
-.hero-dot.active{background:var(--gold);width:48px}
+/* ===== HERO ===== */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0B1D1A 0%,#1A5C50 50%,#134840 100%);z-index:0}
+.hero-bg::before{content:'';position:absolute;inset:0;background:rgba(11,29,26,.55);z-index:1}
+.hero-bg::after{content:'';position:absolute;inset:0;z-index:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px}
+.hero-pattern{position:absolute;top:-20%;right:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,149,60,.12) 0%,transparent 70%);z-index:0}
+.hero .container{position:relative;z-index:2}
+.hero-content{max-width:720px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:24px;letter-spacing:-.03em}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:40px;max-width:580px}
+.btn-hero{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:999px;font-weight:700;font-size:1rem;background:var(--accent);color:var(--white);transition:all .3s var(--ease);text-transform:uppercase;letter-spacing:.5px}
+.btn-hero:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,149,60,.4)}
+.hero-proof{margin-top:56px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-stars{display:flex;align-items:center;gap:4px;color:#F5C518;font-size:1.1rem}
+.hero-rating-text{font-size:.85rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px}
+.hero-avatars{display:flex;margin-left:8px}
+.hero-avatars .avatar{width:36px;height:36px;border-radius:50%;border:2px solid var(--white);margin-left:-10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white)}
+.hero-avatars .avatar:first-child{margin-left:0}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);backdrop-filter:blur(4px)}
 
-/* ========== QUICK LINKS ========== */
-.quick-links{padding:0 0 80px;margin-top:-60px;position:relative;z-index:10}
-.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.quick-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;border:1px solid rgba(0,0,0,.05);box-shadow:var(--shadow);transition:all .35s var(--ease);cursor:pointer;position:relative;overflow:hidden}
-.quick-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
-.quick-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.quick-card:hover::before{transform:scaleX(1)}
-.quick-icon{width:52px;height:52px;border-radius:14px;background:var(--sage);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:all .3s var(--ease)}
-.quick-card:hover .quick-icon{background:var(--teal)}
-.quick-icon svg{width:24px;height:24px;color:var(--teal);transition:color .3s}
-.quick-card:hover .quick-icon svg{color:var(--white)}
-.quick-card h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:8px}
-.quick-card p{font-size:.88rem;color:var(--gray);line-height:1.65;margin-bottom:14px}
-.quick-link{display:inline-flex;align-items:center;gap:5px;font-size:.82rem;font-weight:600;color:var(--teal);transition:gap .3s}
-.quick-card:hover .quick-link{gap:9px}
-.quick-link svg{width:14px;height:14px}
+/* ===== SERVICES ===== */
+.services{padding:100px 0;background:var(--white)}
+.services-header{text-align:center;margin-bottom:56px}
+.services-header .section-sub{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service-card{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-lg);padding:40px 28px;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--primary),var(--accent));transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.service-card:hover::after{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;border-radius:14px;background:var(--light-bg);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.3s}
+.service-card:hover .service-icon{background:var(--primary)}
+.service-icon svg{width:26px;height:26px;color:var(--primary);transition:.3s}
+.service-card:hover .service-icon svg{color:var(--white)}
+.service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.service-card p{font-size:.9rem;color:var(--text-light);line-height:1.7;margin-bottom:18px}
+.service-link{font-size:.85rem;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:5px;transition:.3s}
+.service-card:hover .service-link{gap:9px;color:var(--accent)}
+.service-link svg{width:14px;height:14px}
 
-/* ========== INSPIRATIE ========== */
-.inspiratie{padding:80px 0;background:var(--bg)}
-.inspiratie-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px}
-.inspiratie-header .btn-all{font-size:.88rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
-.inspiratie-header .btn-all:hover{gap:10px;color:var(--gold)}
-.inspiratie-header .btn-all svg{width:16px;height:16px}
-.inspiratie-scroll{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:var(--gray-light) transparent}
-.inspiratie-scroll::-webkit-scrollbar{height:4px}
-.inspiratie-scroll::-webkit-scrollbar-track{background:transparent}
-.inspiratie-scroll::-webkit-scrollbar-thumb{background:var(--gray-light);border-radius:4px}
-.inspi-card{min-width:300px;max-width:300px;scroll-snap-align:start;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(0,0,0,.04);box-shadow:var(--shadow-sm);transition:all .35s var(--ease);cursor:pointer}
-.inspi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.inspi-img{height:180px;position:relative;overflow:hidden}
-.inspi-img-bg{width:100%;height:100%;object-fit:cover}
-.inspi-img .placeholder-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.inspi-img .placeholder-img svg{width:32px;height:32px;opacity:.25}
-.p-img-1{background:linear-gradient(135deg,#1A5C50,#2D8B78)}
-.p-img-2{background:linear-gradient(135deg,#237A6A,#C9953C)}
-.p-img-3{background:linear-gradient(135deg,#134840,#1A5C50)}
-.p-img-4{background:linear-gradient(135deg,#1E2A38,#1A5C50)}
-.p-img-5{background:linear-gradient(135deg,#C9953C,#1A5C50)}
-.inspi-tag{position:absolute;top:14px;left:14px;background:var(--white);padding:4px 12px;border-radius:999px;font-size:.7rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.5px}
-.inspi-body{padding:22px 24px}
-.inspi-body h3{font-size:1rem;font-weight:700;color:var(--dark);line-height:1.4;margin-bottom:8px}
-.inspi-body p{font-size:.84rem;color:var(--gray);line-height:1.6}
+/* ===== ABOUT ===== */
+.about{padding:100px 0;background:var(--light-bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-text .section-label{margin-bottom:8px}
+.about-text p{font-size:1.02rem;color:var(--text-light);line-height:1.8;margin-bottom:20px}
+.about-img{position:relative}
+.about-img-box{width:100%;aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,#1A5C50 0%,#0B1D1A 60%,#C9953C 140%);display:flex;align-items:center;justify-content:center;position:relative}
+.about-img-box::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:20px 20px}
+.about-img-box svg{width:25%;opacity:.15;position:relative;z-index:1}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px}
+.stat-item{text-align:center;padding:28px 16px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.stat-number{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--primary);margin-bottom:4px}
+.stat-label{font-size:.82rem;color:var(--text-light);font-weight:500}
 
-/* ========== ACADEMY ========== */
-.academy{padding:100px 0;background:var(--white)}
-.academy-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.academy-img{position:relative}
-.academy-img-box{width:100%;aspect-ratio:5/4;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,var(--sage),#C5DDD5);display:flex;align-items:center;justify-content:center;position:relative}
-.academy-img-box svg{width:30%;opacity:.2}
-.academy-badge{position:absolute;bottom:-12px;left:-12px;background:var(--gold);color:var(--white);padding:14px 20px;border-radius:var(--radius);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;box-shadow:0 8px 24px rgba(201,149,60,.3)}
-.academy-text .section-label{margin-bottom:12px}
-.academy-text p{color:var(--gray);line-height:1.8;margin-bottom:20px;font-size:1rem}
-.academy-text p:first-of-type{font-size:1.08rem;color:#374151}
-.btn-teal{background:var(--teal);color:var(--white);padding:14px 30px;border-radius:999px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .3s var(--ease)}
-.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,80,.25)}
-.btn-teal svg{width:16px;height:16px}
+/* ===== WHY US ===== */
+.why-us{padding:100px 0;background:var(--white)}
+.why-us-header{text-align:center;margin-bottom:56px}
+.why-us-header .section-sub{margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-card{text-align:center;padding:36px 24px;border-radius:var(--radius-lg);background:var(--light-bg);transition:.4s var(--ease)}
+.why-card:hover{background:var(--white);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.why-card-icon{width:60px;height:60px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:var(--shadow-sm);transition:.3s}
+.why-card:hover .why-card-icon{background:var(--primary)}
+.why-card-icon svg{width:26px;height:26px;color:var(--primary);transition:.3s}
+.why-card:hover .why-card-icon svg{color:var(--white)}
+.why-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px}
+.why-card p{font-size:.88rem;color:var(--text-light);line-height:1.7}
 
-/* ========== PROJECTEN ========== */
-.projecten{padding:80px 0;background:var(--bg)}
-.projecten-header{margin-bottom:40px}
-.proj-scroll{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:var(--gray-light) transparent}
-.proj-scroll::-webkit-scrollbar{height:4px}
-.proj-scroll::-webkit-scrollbar-track{background:transparent}
-.proj-scroll::-webkit-scrollbar-thumb{background:var(--gray-light);border-radius:4px}
-.proj-card{min-width:340px;max-width:340px;scroll-snap-align:start;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(0,0,0,.04);box-shadow:var(--shadow-sm);transition:all .35s var(--ease);cursor:pointer}
-.proj-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.proj-img{height:200px;position:relative;overflow:hidden}
-.proj-img .placeholder-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.proj-img .placeholder-img svg{width:36px;height:36px;opacity:.2}
-.proj-body{padding:24px}
-.proj-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.proj-avatar{width:36px;height:36px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center}
-.proj-avatar svg{width:16px;height:16px;color:var(--teal);opacity:.6}
-.proj-meta-text .pm-name{font-size:.82rem;font-weight:600;color:var(--dark)}
-.proj-meta-text .pm-role{font-size:.72rem;color:var(--gray)}
-.proj-body h3{font-size:1.05rem;font-weight:700;color:var(--dark);line-height:1.4;margin-bottom:12px}
-.proj-link{display:inline-flex;align-items:center;gap:5px;font-size:.84rem;font-weight:600;color:var(--teal);transition:gap .3s}
-.proj-card:hover .proj-link{gap:9px;color:var(--gold)}
-.proj-link svg{width:14px;height:14px}
+/* ===== TESTIMONIALS ===== */
+.testimonials{padding:100px 0;background:var(--light-bg)}
+.testimonials-header{text-align:center;margin-bottom:48px}
+.testimonials-header .section-sub{margin:0 auto}
+.carousel-wrap{position:relative;max-width:900px;margin:0 auto;overflow:hidden}
+.carousel-track{display:flex;transition:transform .5s var(--ease)}
+.testi-card{min-width:100%;padding:0 20px;box-sizing:border-box}
+.testi-inner{background:var(--white);border-radius:var(--radius-lg);padding:44px;box-shadow:var(--shadow);text-align:center}
+.testi-stars{display:flex;justify-content:center;gap:4px;margin-bottom:20px;color:#F5C518;font-size:1.1rem}
+.testi-quote{font-size:1.1rem;color:var(--text);line-height:1.8;font-style:italic;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.testi-author{font-weight:700;color:var(--text);font-size:.95rem}
+.testi-company{font-size:.85rem;color:var(--text-light);margin-top:4px}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--white);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;z-index:5;border:none}
+.carousel-btn:hover{background:var(--primary);color:var(--white)}
+.carousel-btn svg{width:20px;height:20px;color:var(--text);transition:.3s}
+.carousel-btn:hover svg{color:var(--white)}
+.carousel-prev{left:0}
+.carousel-next{right:0}
+.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:28px}
+.carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(26,92,80,.2);cursor:pointer;transition:.3s}
+.carousel-dot.active{background:var(--primary);transform:scale(1.2)}
 
-/* ========== EXPERTISE ========== */
-.expertise{padding:100px 0;background:var(--white)}
-.expertise-header{text-align:center;margin-bottom:56px}
-.expertise-header .section-sub{margin:0 auto}
-.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.exp-card{background:var(--bg);border-radius:var(--radius-lg);padding:44px 32px;position:relative;border:1px solid transparent;transition:all .4s var(--ease);cursor:pointer;overflow:hidden}
-.exp-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--teal),var(--gold));transform:scaleX(0);transition:transform .4s var(--ease);transform-origin:left}
-.exp-card:hover{background:var(--white);border-color:rgba(26,92,80,.1);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
-.exp-card:hover::after{transform:scaleX(1)}
-.exp-icon{width:60px;height:60px;border-radius:16px;background:var(--sage);display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:all .3s var(--ease)}
-.exp-card:hover .exp-icon{background:var(--teal)}
-.exp-icon svg{width:28px;height:28px;color:var(--teal);transition:color .3s}
-.exp-card:hover .exp-icon svg{color:var(--white)}
-.exp-card h3{font-size:1.2rem;font-weight:700;color:var(--dark);margin-bottom:12px}
-.exp-card p{font-size:.92rem;color:var(--gray);line-height:1.75;margin-bottom:18px}
-.exp-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--teal);transition:gap .3s}
-.exp-card:hover .exp-link{gap:10px;color:var(--gold)}
-.exp-link svg{width:15px;height:15px}
+/* ===== CTA BANNER ===== */
+.cta-banner{padding:80px 0;background:linear-gradient(135deg,var(--dark-bg),var(--primary));text-align:center;position:relative;overflow:hidden}
+.cta-banner::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.cta-banner .container{position:relative;z-index:1}
+.cta-banner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:16px}
+.cta-banner p{font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:36px}
 
-/* ========== CLIENT LOGOS ========== */
-.clients{padding:64px 0;background:var(--bg);overflow:hidden}
-.clients-title{text-align:center;margin-bottom:36px}
-.clients-title h3{font-size:1rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1.5px}
+/* ===== CASES ===== */
+.cases{padding:100px 0;background:var(--white)}
+.cases-header{margin-bottom:48px}
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.case-card{border-radius:var(--radius-lg);overflow:hidden;background:var(--white);border:1px solid rgba(0,0,0,.06);transition:.4s var(--ease)}
+.case-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.case-img{height:200px;position:relative;overflow:hidden}
+.case-img-bg{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.case-img-bg svg{width:36px;height:36px;opacity:.2}
+.ci-1{background:linear-gradient(135deg,#1A5C50,#0B1D1A)}
+.ci-2{background:linear-gradient(135deg,#C9953C,#1A5C50)}
+.ci-3{background:linear-gradient(135deg,#0B1D1A,#237A6A)}
+.ci-4{background:linear-gradient(135deg,#134840,#C9953C)}
+.case-label{position:absolute;top:14px;left:14px;background:var(--accent);color:var(--white);padding:4px 12px;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.case-body{padding:28px}
+.case-body h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.case-body>p{font-size:.88rem;color:var(--text-light);line-height:1.7;margin-bottom:16px}
+.case-metrics{display:flex;gap:20px;margin-bottom:16px}
+.case-metric{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--primary)}
+.case-metric svg{width:14px;height:14px}
+.case-link{font-size:.85rem;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:5px;transition:.3s}
+.case-link:hover{gap:9px;color:var(--accent)}
+.case-link svg{width:14px;height:14px}
+
+/* ===== BLOG ===== */
+.blog{padding:100px 0;background:var(--light-bg)}
+.blog-header{margin-bottom:48px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.blog-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(0,0,0,.04);box-shadow:var(--shadow-sm);transition:.4s var(--ease)}
+.blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.blog-img{height:180px;position:relative}
+.blog-img-bg{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.blog-img-bg svg{width:32px;height:32px;opacity:.2}
+.bi-1{background:linear-gradient(135deg,#1A5C50,#C9953C)}
+.bi-2{background:linear-gradient(135deg,#0B1D1A,#1A5C50)}
+.bi-3{background:linear-gradient(135deg,#C9953C,#134840)}
+.blog-body{padding:24px}
+.blog-body h3{font-size:1rem;font-weight:700;line-height:1.4;margin-bottom:10px}
+.blog-meta{font-size:.78rem;color:var(--text-light);font-weight:500}
+
+/* ===== FAQ ===== */
+.faq{padding:100px 0;background:var(--white)}
+.faq-header{text-align:center;margin-bottom:56px}
+.faq-header .section-sub{margin:0 auto}
+.faq-columns{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.faq-col h3{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--primary)}
+.faq-item{border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:var(--primary);box-shadow:var(--shadow-sm)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-size:.92rem;font-weight:600;color:var(--text);gap:12px}
+.faq-q svg{width:20px;height:20px;flex-shrink:0;color:var(--text-light);transition:transform .3s var(--ease)}
+.faq-item.open .faq-q svg{transform:rotate(180deg);color:var(--primary)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-a-inner{padding:0 20px 16px;font-size:.9rem;color:var(--text-light);line-height:1.75}
+
+/* ===== TRUST MARQUEE ===== */
+.trust{padding:64px 0;background:var(--light-bg);overflow:hidden}
+.trust-header{text-align:center;margin-bottom:32px}
+.trust-header h3{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-light)}
+.trust-header p{font-size:.8rem;color:var(--text-light);margin-top:4px}
 .marquee-wrap{position:relative}
-.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
-.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent)}
-.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
-.marquee{display:flex;gap:28px;animation:marquee 40s linear infinite;width:max-content}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--light-bg),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--light-bg),transparent)}
+.marquee{display:flex;gap:24px;animation:marquee 50s linear infinite;width:max-content}
 .marquee:hover{animation-play-state:paused}
-.logo-box{width:140px;height:56px;border-radius:10px;background:var(--white);border:1px solid rgba(0,0,0,.05);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s var(--ease)}
-.logo-box:hover{border-color:var(--teal);box-shadow:var(--shadow-sm)}
-.logo-box span{font-size:.72rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:1px}
+.logo-placeholder{width:150px;height:56px;border-radius:10px;background:linear-gradient(135deg,#d8ddd6,#e8ede6);border:1px solid rgba(0,0,0,.04);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-placeholder span{font-size:.68rem;font-weight:600;color:#9aa69e;text-transform:uppercase;letter-spacing:.5px}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ========== CONTACT ========== */
+/* ===== CONTACT ===== */
 .contact{padding:100px 0;background:var(--white)}
 .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}
-.contact-form{background:var(--bg);border-radius:var(--radius-lg);padding:44px}
-.contact-form h3{font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:24px}
+.contact-form{background:var(--light-bg);border-radius:var(--radius-lg);padding:44px}
+.contact-form h3{font-size:1.25rem;font-weight:700;margin-bottom:24px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .form-group{display:flex;flex-direction:column;gap:6px}
 .form-group.full{grid-column:span 2}
-.form-group label{font-size:.82rem;font-weight:600;color:var(--dark)}
-.form-group input,.form-group select,.form-group textarea{padding:12px 16px;border-radius:10px;border:1.5px solid var(--gray-light);background:var(--white);font-size:.9rem;color:var(--dark);transition:border-color .25s}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,92,80,.08)}
-.form-group textarea{min-height:120px;resize:vertical}
-.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%235F6B7A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
-.btn-submit{background:var(--teal);color:var(--white);padding:14px 36px;border-radius:999px;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s var(--ease);margin-top:8px;cursor:pointer;border:none}
-.btn-submit:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,80,.2)}
-.btn-submit svg{width:16px;height:16px}
-.contact-info{padding-top:20px}
-.contact-info h3{font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:8px}
-.contact-info>p{color:var(--gray);line-height:1.75;margin-bottom:32px;font-size:.95rem}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{padding:12px 16px;border-radius:10px;border:1.5px solid #d5ddd8;background:var(--white);font-size:.9rem;color:var(--text);transition:.25s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,92,80,.08)}
+.form-group textarea{min-height:110px;resize:vertical}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B7B75' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.btn-submit{background:var(--primary);color:var(--white);padding:14px 36px;border-radius:999px;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;transition:.3s var(--ease);margin-top:8px;cursor:pointer;border:none}
+.btn-submit:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,80,.2)}
+.contact-info{padding-top:8px}
+.contact-info h3{font-size:1.5rem;font-weight:800;margin-bottom:8px}
+.contact-info>p{font-size:1rem;color:var(--text-light);line-height:1.8;margin-bottom:32px}
 .contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px}
-.contact-detail-icon{width:44px;height:44px;border-radius:12px;background:var(--sage);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-detail-icon svg{width:20px;height:20px;color:var(--teal)}
-.contact-detail-text .cd-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:2px}
-.contact-detail-text a,.contact-detail-text p{font-size:.92rem;color:var(--dark);font-weight:500}
-.contact-detail-text a:hover{color:var(--teal)}
+.cd-icon{width:44px;height:44px;border-radius:12px;background:var(--light-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cd-icon svg{width:20px;height:20px;color:var(--primary)}
+.cd-text .cd-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);margin-bottom:2px}
+.cd-text a,.cd-text p{font-size:.92rem;color:var(--text);font-weight:500}
+.cd-text a:hover{color:var(--primary)}
+.social-links{display:flex;gap:10px;margin-top:32px}
+.social-links a{width:40px;height:40px;border-radius:10px;background:var(--light-bg);display:flex;align-items:center;justify-content:center;transition:.3s}
+.social-links a:hover{background:var(--primary)}
+.social-links a svg{width:18px;height:18px;color:var(--text-light);transition:.3s}
+.social-links a:hover svg{color:var(--white)}
 
-/* ========== FOOTER ========== */
-.footer{background:var(--dark);padding:64px 0 0;color:rgba(255,255,255,.6)}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07)}
-.footer-brand .footer-logo{margin-bottom:16px}
+/* ===== FOOTER ===== */
+.footer{background:var(--dark-bg);padding:64px 0 0;color:rgba(255,255,255,.6)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand p{font-size:.88rem;line-height:1.75;margin:16px 0 20px}
 .footer-brand .footer-logo svg{height:36px}
-.footer-brand p{font-size:.88rem;line-height:1.7;margin-bottom:20px}
 .footer-social{display:flex;gap:10px}
-.footer-social a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease)}
-.footer-social a:hover{background:var(--teal)}
+.footer-social a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:.3s}
+.footer-social a:hover{background:var(--primary)}
 .footer-social a svg{width:16px;height:16px;color:rgba(255,255,255,.6)}
 .footer-social a:hover svg{color:var(--white)}
-.footer h4{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px}
+.footer h4{font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px}
 .footer ul li{margin-bottom:10px}
-.footer ul li a{font-size:.86rem;transition:color .2s}
-.footer ul li a:hover{color:var(--gold)}
-.footer-newsletter p{font-size:.86rem;margin-bottom:14px}
-.newsletter-form{display:flex;gap:8px}
-.newsletter-form input{flex:1;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:var(--white);font-size:.86rem}
-.newsletter-form input::placeholder{color:rgba(255,255,255,.35)}
-.newsletter-form input:focus{border-color:var(--teal);background:rgba(255,255,255,.1)}
-.newsletter-form button{background:var(--gold);color:var(--white);padding:10px 20px;border-radius:999px;font-weight:600;font-size:.82rem;transition:all .3s var(--ease);white-space:nowrap}
-.newsletter-form button:hover{background:var(--gold-hover)}
-.footer-bottom{padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.35)}
-.footer-bottom-links{display:flex;gap:20px}
-.footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.35);transition:color .2s}
-.footer-bottom-links a:hover{color:var(--gold)}
+.footer ul li a{font-size:.86rem;transition:.2s}
+.footer ul li a:hover{color:var(--accent)}
+.footer-bottom{padding:24px 0;display:flex;justify-content:center}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.3)}
 
-/* ========== RESPONSIVE ========== */
+/* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
-  .hero-content{max-width:90%}
-  .quick-grid{grid-template-columns:repeat(3,1fr);gap:14px}
-  .academy-grid{grid-template-columns:1fr;gap:40px}
-  .academy-img{max-width:520px;margin:0 auto}
-  .expertise-grid{grid-template-columns:1fr 1fr}
-  .contact-grid{grid-template-columns:1fr;gap:48px}
-  .footer-grid{grid-template-columns:repeat(2,1fr)}
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.why-grid{grid-template-columns:repeat(2,1fr)}
+.about-grid{grid-template-columns:1fr;gap:40px}
+.about-img{max-width:500px}
+.stats-row{grid-template-columns:repeat(2,1fr)}
+.cases-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+.faq-columns{grid-template-columns:1fr}
+.nav-center{display:none}
+.nav-phone{display:none}
+.hamburger{display:flex}
 }
 @media(max-width:768px){
-  .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);flex-direction:column;justify-content:center;align-items:center;gap:20px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
-  .nav-links.open{opacity:1;pointer-events:all}
-  .nav-links a{color:var(--white)!important;font-size:1.15rem}
-  .hamburger{display:flex}
-  .hero{min-height:auto;height:auto;padding-bottom:100px}
-  .hero-slide{position:relative;min-height:100vh}
-  .hero h1{font-size:clamp(2rem,7vw,2.8rem)}
-  .hero-buttons{flex-direction:column;align-items:flex-start}
-  .quick-links{margin-top:-40px}
-  .quick-grid{grid-template-columns:1fr;gap:12px}
-  .expertise-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .form-group.full{grid-column:span 1}
-  .footer-grid{grid-template-columns:1fr}
-  .hero-dots{bottom:24px}
-  .proj-card{min-width:290px;max-width:290px}
-  .inspi-card{min-width:270px;max-width:270px}
+.services-grid{grid-template-columns:1fr}
+.why-grid{grid-template-columns:1fr}
+.blog-grid{grid-template-columns:1fr}
+.stats-row{grid-template-columns:repeat(2,1fr);gap:16px}
+.form-row{grid-template-columns:1fr}
+.form-group.full{grid-column:span 1}
+.footer-grid{grid-template-columns:1fr}
+.hero{min-height:auto;padding:140px 0 80px}
+.hero h1{font-size:clamp(1.8rem,7vw,2.4rem)}
+.hero-proof{flex-direction:column;align-items:flex-start;gap:12px}
+.contact-form{padding:28px 20px}
 }
 @media(max-width:480px){
-  .container{padding:0 16px}
-  .contact-form{padding:28px 20px}
-  .hero-content{max-width:100%}
+.container{padding:0 16px}
+.hero-content{max-width:100%}
 }
 </style>
 </head>
 <body>
 
-<!-- ========== NAVBAR ========== -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="nav-logo">
-      <svg viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 44 L32 8 L44 44" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <line x1="24" y1="32" x2="40" y2="32" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 8 Q48 4 48 16 Q48 24 40 26" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <circle cx="48" cy="16" r="2.5" fill="#C9953C"/>
-        <text x="60" y="32" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="#fff" letter-spacing="-0.5">Allure</text>
-        <text x="60" y="48" font-family="Inter,sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,.65)" letter-spacing="2">CONSULTANCY</text>
-      </svg>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#expertise">Expertise</a>
-      <a href="#werkwijze">Werkwijze</a>
-      <a href="#projecten">Projecten</a>
-      <a href="#inspiratie">Inspiratie</a>
-      <a href="#over-ons">Over Ons</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="container">
+<a href="#" class="nav-logo">
+<svg viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 48 L24 6 L40 48" stroke="#1A5C50" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="14" y1="34" x2="34" y2="34" stroke="#1A5C50" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M24 6 Q42 1 43 14 Q43.5 22 36 25" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<circle cx="43" cy="14" r="3" fill="#C9953C"/>
+<text x="56" y="32" font-family="Inter,sans-serif" font-size="30" font-weight="700" fill="#1A5C50" letter-spacing="-0.5">Allure</text>
+<text x="56" y="50" font-family="Inter,sans-serif" font-size="13" font-weight="400" fill="#6B7B75" letter-spacing="3">CONSULTANCY</text>
+</svg>
+</a>
+<div class="nav-center" id="navCenter">
+<a href="#diensten">Diensten</a>
+<a href="#over-ons">Over Ons</a>
+<a href="#werkwijze">Werkwijze</a>
+<a href="#cases">Cases</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-right">
+<a href="tel:0103140020" class="nav-phone">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+010-3140020
+</a>
+<a href="#contact" class="btn-cta">Gratis Adviesgesprek</a>
+</div>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
 </nav>
+<div class="mobile-overlay" id="mobileMenu">
+<a href="#diensten">Diensten</a>
+<a href="#over-ons">Over Ons</a>
+<a href="#werkwijze">Werkwijze</a>
+<a href="#cases">Cases</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a href="tel:0103140020" style="color:var(--accent)">010-3140020</a>
+<a href="#contact" class="btn-cta" style="margin-top:12px">Gratis Adviesgesprek</a>
+</div>
 
-<!-- ========== HERO CAROUSEL ========== -->
+<!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-slides" id="heroSlides">
-    <div class="hero-slide slide-1 active">
-      <div class="slide-bg"></div>
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-eyebrow"><span></span> Verandercommunicatie</div>
-          <h1>Strategie. Realisatie.<br><em>Verandering.</em></h1>
-          <p class="hero-sub">Allure Consultancy is specialist in verandercommunicatie. Wij helpen organisaties helder en effectief te communiceren bij transities, veranderprocessen en maatschappelijke opgaven.</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-gold">
-              Afspraak maken
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#over-ons" class="btn btn-outline-w">Over Allure Consultancy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-slide slide-2">
-      <div class="slide-bg"></div>
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-eyebrow"><span></span> Interne Communicatie</div>
-          <h1>Verbind je<br>organisatie van <em>binnenuit</em></h1>
-          <p class="hero-sub">Van strategisch advies tot hands-on uitvoering. Wij ondersteunen bij interne communicatie die medewerkers meeneemt, motiveert en activeert bij verandering.</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-gold">
-              Neem contact op
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#expertise" class="btn btn-outline-w">Onze expertise</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-slide slide-3">
-      <div class="slide-bg"></div>
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-eyebrow"><span></span> Omgevingscommunicatie</div>
-          <h1>Draagvlak creëren<br>door <em>verbinding</em></h1>
-          <p class="hero-sub">Bij ruimtelijke projecten en maatschappelijke veranderingen zorgen wij voor heldere communicatie, participatie en draagvlak in de omgeving.</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-gold">
-              Meer weten
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#projecten" class="btn btn-outline-w">Bekijk projecten</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-dots" id="heroDots">
-    <div class="hero-dot active" data-slide="0"></div>
-    <div class="hero-dot" data-slide="1"></div>
-    <div class="hero-dot" data-slide="2"></div>
-  </div>
+<div class="hero-bg"></div>
+<div class="hero-pattern"></div>
+<div class="container">
+<div class="hero-content">
+<h1>Jouw Marketing Bureau in Rotterdam: <span>Data-Gedreven Groei</span></h1>
+<p class="hero-sub">Als data-gedreven marketing bureau helpt Allure Consultancy bedrijven in Rotterdam en heel Nederland met SEO, contentstrategie, social media en webdesign die meetbaar resultaat opleveren.</p>
+<a href="#contact" class="btn-hero">GRATIS STRATEGIEGESPREK <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+<div class="hero-proof">
+<div class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<span class="hero-rating-text">5-STERREN BEOORDEELD DOOR ONDERNEMERS IN ROTTERDAM</span>
+<div class="hero-avatars">
+<div class="avatar">JD</div>
+<div class="avatar">MK</div>
+<div class="avatar">SV</div>
+</div>
+<span class="hero-badge">40+ Google Reviews</span>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== QUICK LINKS ========== -->
-<section class="quick-links" id="werkwijze">
-  <div class="container">
-    <div class="quick-grid">
-      <div class="quick-card fade-up">
-        <div class="quick-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Interne Communicatie</h3>
-        <p>Effectieve communicatie die medewerkers meeneemt bij organisatieveranderingen en transities.</p>
-        <span class="quick-link">
-          Lees meer
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </span>
-      </div>
-      <div class="quick-card fade-up d1">
-        <div class="quick-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Omgevingscommunicatie</h3>
-        <p>Helder communiceren bij veranderingen in de leefomgeving. Draagvlak en participatie centraal.</p>
-        <span class="quick-link">
-          Lees meer
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </span>
-      </div>
-      <div class="quick-card fade-up d2">
-        <div class="quick-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Content &amp; Online</h3>
-        <p>Strategische content die de juiste doelgroep raakt. Van online strategie tot uitvoering.</p>
-        <span class="quick-link">
-          Lees meer
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </span>
-      </div>
-    </div>
-  </div>
+<!-- SERVICES -->
+<section class="services" id="diensten">
+<div class="container">
+<div class="services-header">
+<span class="section-label fade-up">Onze Diensten</span>
+<h2 class="section-title fade-up d1">Onze Diensten in Rotterdam</h2>
+<p class="section-sub fade-up d2">Wij bieden een compleet pakket aan marketingdiensten waarmee jouw bedrijf online groeit en meer klanten bereikt.</p>
+</div>
+<div class="services-grid">
+<div class="service-card fade-up">
+<div class="service-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+</div>
+<h3>SEO &amp; Vindbaarheid</h3>
+<p>Hoger scoren in Google met bewezen SEO-strategieën. Van technische optimalisatie tot linkbuilding en lokale SEO in Rotterdam.</p>
+<span class="service-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+</div>
+<div class="service-card fade-up d1">
+<div class="service-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+</div>
+<h3>Content Marketing</h3>
+<p>Strategische content die jouw doelgroep raakt en converteert. Blogs, video, social posts en meer — altijd data-gedreven.</p>
+<span class="service-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+</div>
+<div class="service-card fade-up d2">
+<div class="service-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/><path d="M2 8c0-3.58 2.69-6.53 6.16-6.95"/><path d="M22 8A9.96 9.96 0 0017.84 1.05"/></svg>
+</div>
+<h3>Social Media Management</h3>
+<p>Professioneel beheer van al jouw social media kanalen. Strategie, content creatie, community management en advertenties.</p>
+<span class="service-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+</div>
+<div class="service-card fade-up d3">
+<div class="service-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+</div>
+<h3>Web Design &amp; Development</h3>
+<p>Moderne, snelle websites die converteren. Van responsive webdesign tot e-commerce oplossingen en webapplicaties.</p>
+<span class="service-link">Meer info <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== INSPIRATIE ========== -->
-<section class="inspiratie" id="inspiratie">
-  <div class="container">
-    <div class="inspiratie-header">
-      <div>
-        <span class="section-label fade-up">Inspiratie</span>
-        <h2 class="section-title fade-up d1">Blogs, webinars en meer</h2>
-      </div>
-      <a href="#" class="btn-all fade-up d2">
-        Alle artikelen
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <div class="inspiratie-scroll">
-      <div class="inspi-card fade-up">
-        <div class="inspi-img">
-          <div class="placeholder-img p-img-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <span class="inspi-tag">Blog</span>
-        </div>
-        <div class="inspi-body">
-          <h3>5 lessen over verandercommunicatie die elke organisatie moet kennen</h3>
-          <p>Wat maakt communicatie bij verandering effectief? Onze senior adviseurs delen hun belangrijkste inzichten.</p>
-        </div>
-      </div>
-      <div class="inspi-card fade-up d1">
-        <div class="inspi-img">
-          <div class="placeholder-img p-img-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-          </div>
-          <span class="inspi-tag">Whitepaper</span>
-        </div>
-        <div class="inspi-body">
-          <h3>De rol van participatie bij gebiedsontwikkeling</h3>
-          <p>Hoe betrek je bewoners en stakeholders bij complexe ruimtelijke opgaven?</p>
-        </div>
-      </div>
-      <div class="inspi-card fade-up d2">
-        <div class="inspi-img">
-          <div class="placeholder-img p-img-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-          </div>
-          <span class="inspi-tag">Webinar</span>
-        </div>
-        <div class="inspi-body">
-          <h3>Webinar: Medewerkers meenemen in digitale transformatie</h3>
-          <p>Terugkijken: zo communiceer je effectief over digitale veranderingen op de werkvloer.</p>
-        </div>
-      </div>
-      <div class="inspi-card fade-up d3">
-        <div class="inspi-img">
-          <div class="placeholder-img p-img-4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <span class="inspi-tag">Nieuws</span>
-        </div>
-        <div class="inspi-body">
-          <h3>Allure Consultancy wint communicatie-award 2025</h3>
-          <p>Ons project voor de gemeente Utrecht is bekroond met de Gouden Loeki voor overheidscommunicatie.</p>
-        </div>
-      </div>
-      <div class="inspi-card fade-up d4">
-        <div class="inspi-img">
-          <div class="placeholder-img p-img-5">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <span class="inspi-tag">Blog</span>
-        </div>
-        <div class="inspi-body">
-          <h3>Gedragsverandering begint bij begrijpen, niet bij zenden</h3>
-          <p>Waarom gedragscommunicatie vraagt om een andere aanpak dan traditionele voorlichting.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- ABOUT -->
+<section class="about" id="over-ons">
+<div class="container">
+<div class="about-grid">
+<div class="about-text">
+<span class="section-label fade-up">Over Ons</span>
+<h2 class="section-title fade-up d1">Wie Wij Zijn</h2>
+<p class="fade-up d2">Allure Consultancy is een full-service marketing bureau opgericht om bedrijven te helpen groeien in het digitale landschap. Vanuit ons kantoor in Rotterdam werken wij met ondernemers en bedrijven door heel Nederland.</p>
+<p class="fade-up d3">Ons team van ervaren marketeers, designers en strategen combineert creativiteit met data om campagnes te bouwen die echt resultaat opleveren. Wij geloven in transparantie, meetbare resultaten en langetermijn partnerships.</p>
+<a href="#contact" class="btn-cta fade-up d4" style="margin-top:8px">Maak Kennis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+<div class="about-img fade-up d2">
+<div class="about-img-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+</div>
+</div>
+</div>
+<div class="stats-row">
+<div class="stat-item fade-up">
+<div class="stat-number" data-target="10">0</div>
+<div class="stat-label">Jaar Ervaring</div>
+</div>
+<div class="stat-item fade-up d1">
+<div class="stat-number" data-target="150">0</div>
+<div class="stat-label">Succesvolle Projecten</div>
+</div>
+<div class="stat-item fade-up d2">
+<div class="stat-number" data-target="98">0</div>
+<div class="stat-label">Klanttevredenheid</div>
+</div>
+<div class="stat-item fade-up d3">
+<div class="stat-number" data-target="5.0" data-decimal="true">0</div>
+<div class="stat-label">Google Rating</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== ACADEMY ========== -->
-<section class="academy" id="over-ons">
-  <div class="container">
-    <div class="academy-grid">
-      <div class="academy-img fade-up">
-        <div class="academy-img-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1A5C50" stroke-width="1.2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-        </div>
-        <div class="academy-badge">Allure Academy</div>
-      </div>
-      <div class="academy-text">
-        <span class="section-label fade-up">Academy</span>
-        <h2 class="section-title fade-up d1">Allure Academy</h2>
-        <p class="fade-up d2">Praktijkgerichte trainingen en masterclasses voor communicatieprofessionals. Onze trainers combineren jarenlange ervaring met de nieuwste inzichten uit het vakgebied.</p>
-        <p class="fade-up d3">Van verandercommunicatie en stakeholdermanagement tot contentmarketing en omgevingsparticipatie — verdiep je kennis en versterk je vaardigheden met Allure Academy.</p>
-        <a href="#" class="btn-teal fade-up d4">
-          Bekijk ons aanbod
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- WHY US -->
+<section class="why-us" id="werkwijze">
+<div class="container">
+<div class="why-us-header">
+<span class="section-label fade-up">Waarom Allure</span>
+<h2 class="section-title fade-up d1">Waarom Kiezen voor Ons</h2>
+<p class="section-sub fade-up d2">Wij onderscheiden ons door een persoonlijke aanpak, meetbare resultaten en een team dat écht betrokken is bij jouw succes.</p>
+</div>
+<div class="why-grid">
+<div class="why-card fade-up">
+<div class="why-card-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+</div>
+<h3>Bewezen Track Record</h3>
+<p>Meer dan 150 succesvolle projecten en tevreden klanten in diverse branches bewijzen onze expertise.</p>
+</div>
+<div class="why-card fade-up d1">
+<div class="why-card-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+</div>
+<h3>Oplossingen Op Maat</h3>
+<p>Geen standaard pakketten maar strategieën die perfect aansluiten bij jouw bedrijfsdoelen en budget.</p>
+</div>
+<div class="why-card fade-up d2">
+<div class="why-card-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+</div>
+<h3>Klantgericht</h3>
+<p>Korte lijnen, persoonlijke aandacht en een vast aanspreekpunt. Jouw succes is ons succes.</p>
+</div>
+<div class="why-card fade-up d3">
+<div class="why-card-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+</div>
+<h3>Continue Innovatie</h3>
+<p>Wij blijven vooroplopen met de nieuwste tools, technieken en trends in digital marketing.</p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== PROJECTEN ========== -->
-<section class="projecten" id="projecten">
-  <div class="container">
-    <div class="projecten-header">
-      <span class="section-label fade-up">Projecten</span>
-      <h2 class="section-title fade-up d1">Waar wij aan werken</h2>
-      <p class="section-sub fade-up d2">Een selectie van projecten waarin wij organisaties hebben geholpen met communicatie bij verandering.</p>
-    </div>
-    <div class="proj-scroll">
-      <div class="proj-card fade-up">
-        <div class="proj-img">
-          <div class="placeholder-img p-img-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <div class="proj-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="proj-meta-text"><div class="pm-name">Lisa van den Berg</div><div class="pm-role">Senior Adviseur</div></div>
-          </div>
-          <h3>Interne communicatie bij fusie Gemeente Utrecht</h3>
-          <a href="#" class="proj-link">Lees meer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <div class="proj-card fade-up d1">
-        <div class="proj-img">
-          <div class="placeholder-img p-img-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <div class="proj-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="proj-meta-text"><div class="pm-name">Mark Jansen</div><div class="pm-role">Communicatie Adviseur</div></div>
-          </div>
-          <h3>Omgevingscommunicatie A27 verbreding Rijkswaterstaat</h3>
-          <a href="#" class="proj-link">Lees meer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <div class="proj-card fade-up d2">
-        <div class="proj-img">
-          <div class="placeholder-img p-img-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <div class="proj-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="proj-meta-text"><div class="pm-name">Sophie de Vries</div><div class="pm-role">Content Strateeg</div></div>
-          </div>
-          <h3>Contentmarketing strategie Rabobank</h3>
-          <a href="#" class="proj-link">Lees meer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <div class="proj-card fade-up d3">
-        <div class="proj-img">
-          <div class="placeholder-img p-img-4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <div class="proj-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="proj-meta-text"><div class="pm-name">Thomas Bakker</div><div class="pm-role">Participatie Specialist</div></div>
-          </div>
-          <h3>Participatietraject energietransitie Provincie Noord-Holland</h3>
-          <a href="#" class="proj-link">Lees meer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <div class="proj-card fade-up d4">
-        <div class="proj-img">
-          <div class="placeholder-img p-img-5">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-meta">
-            <div class="proj-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="proj-meta-text"><div class="pm-name">Anna Willems</div><div class="pm-role">Senior Adviseur</div></div>
-          </div>
-          <h3>Gedragscampagne duurzaamheid Ministerie van I&amp;W</h3>
-          <a href="#" class="proj-link">Lees meer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+<div class="container">
+<div class="testimonials-header">
+<span class="section-label fade-up">Reviews</span>
+<h2 class="section-title fade-up d1">Wat Onze Klanten Zeggen</h2>
+<p class="section-sub fade-up d2">Ontdek waarom bedrijven in Rotterdam en heel Nederland kiezen voor Allure Consultancy.</p>
+</div>
+<div class="carousel-wrap fade-up d3">
+<div class="carousel-track" id="carouselTrack">
+<div class="testi-card">
+<div class="testi-inner">
+<div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="testi-quote">"Allure Consultancy heeft onze online zichtbaarheid volledig getransformeerd. Binnen 6 maanden stonden we op pagina 1 van Google voor al onze belangrijkste zoekwoorden. De ROI is fenomenaal."</p>
+<div class="testi-author">Peter van der Berg</div>
+<div class="testi-company">Directeur, Van der Berg Advocaten</div>
+</div>
+</div>
+<div class="testi-card">
+<div class="testi-inner">
+<div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="testi-quote">"Eindelijk een marketing bureau dat doet wat het belooft. Het team denkt écht mee en de maandelijkse rapportages zijn helder en concreet. Onze omzet is met 40% gestegen dankzij hun aanpak."</p>
+<div class="testi-author">Sandra Visser</div>
+<div class="testi-company">Eigenaar, Visser Interieur Rotterdam</div>
+</div>
+</div>
+<div class="testi-card">
+<div class="testi-inner">
+<div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="testi-quote">"De nieuwe website die Allure voor ons heeft gebouwd overtreft alle verwachtingen. Modern, snel en onze online bestellingen zijn verdrievoudigd. Daarnaast beheren ze onze social media kanalen uitstekend."</p>
+<div class="testi-author">Mohammed El Amrani</div>
+<div class="testi-company">Oprichter, Fresh Bites Horeca</div>
+</div>
+</div>
+</div>
+<button class="carousel-btn carousel-prev" id="carouselPrev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+<button class="carousel-btn carousel-next" id="carouselNext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+<div class="carousel-dots" id="carouselDots">
+<div class="carousel-dot active" data-index="0"></div>
+<div class="carousel-dot" data-index="1"></div>
+<div class="carousel-dot" data-index="2"></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== EXPERTISE ========== -->
-<section class="expertise" id="expertise">
-  <div class="container">
-    <div class="expertise-header">
-      <span class="section-label fade-up">Onze Expertise</span>
-      <h2 class="section-title fade-up d1">Waar wij in uitblinken</h2>
-      <p class="section-sub fade-up d2">Van strategisch advies tot uitvoering — onze expertise helpt organisaties effectief communiceren bij verandering.</p>
-    </div>
-    <div class="expertise-grid">
-      <div class="exp-card fade-up">
-        <div class="exp-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Interne Communicatie</h3>
-        <p>Communiceren bij veranderingen in de werkomgeving. Wij helpen organisaties medewerkers te betrekken, motiveren en activeren bij reorganisaties, fusies, digitale transformaties en cultuurveranderingen.</p>
-        <a href="#" class="exp-link">
-          Meer informatie
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="exp-card fade-up d1">
-        <div class="exp-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Omgevingscommunicatie</h3>
-        <p>Helder communiceren bij veranderingen in de leefomgeving. Van infrastructurele projecten tot gebiedsontwikkeling — wij creëren draagvlak door participatie, dialoog en transparante communicatie.</p>
-        <a href="#" class="exp-link">
-          Meer informatie
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="exp-card fade-up d2">
-        <div class="exp-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Content &amp; Strategie</h3>
-        <p>Content die de juiste doelgroep raakt. Wij ontwikkelen online strategieën, contentplannen en campagnes die bijdragen aan de communicatiedoelstellingen van uw organisatie.</p>
-        <a href="#" class="exp-link">
-          Meer informatie
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- CTA BANNER -->
+<section class="cta-banner">
+<div class="container">
+<h2 class="fade-up">Laten We Jouw Bedrijf Laten Groeien</h2>
+<p class="fade-up d1">Plan vandaag nog je GRATIS adviesgesprek en ontdek hoe wij jouw bedrijf kunnen laten groeien.</p>
+<a href="#contact" class="btn-hero fade-up d2">GRATIS ADVIESGESPREK <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
 </section>
 
-<!-- ========== CLIENT LOGOS ========== -->
-<section class="clients">
-  <div class="clients-title">
-    <h3 class="fade-up">Voor wie wij werken</h3>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee">
-      <div class="logo-box"><span>Rijkswaterstaat</span></div>
-      <div class="logo-box"><span>Gemeente Utrecht</span></div>
-      <div class="logo-box"><span>Rabobank</span></div>
-      <div class="logo-box"><span>NS</span></div>
-      <div class="logo-box"><span>ProRail</span></div>
-      <div class="logo-box"><span>Provincie NH</span></div>
-      <div class="logo-box"><span>Min. van I&W</span></div>
-      <div class="logo-box"><span>Waternet</span></div>
-      <div class="logo-box"><span>Stedin</span></div>
-      <div class="logo-box"><span>Alliander</span></div>
-      <div class="logo-box"><span>BAM</span></div>
-      <div class="logo-box"><span>VolkerWessels</span></div>
-      <div class="logo-box"><span>Heijmans</span></div>
-      <div class="logo-box"><span>GGD</span></div>
-      <div class="logo-box"><span>Schiphol</span></div>
-      <div class="logo-box"><span>Eneco</span></div>
-      <div class="logo-box"><span>Vitens</span></div>
-      <div class="logo-box"><span>TenneT</span></div>
-      <div class="logo-box"><span>Rijkswaterstaat</span></div>
-      <div class="logo-box"><span>Gemeente Utrecht</span></div>
-      <div class="logo-box"><span>Rabobank</span></div>
-      <div class="logo-box"><span>NS</span></div>
-      <div class="logo-box"><span>ProRail</span></div>
-      <div class="logo-box"><span>Provincie NH</span></div>
-      <div class="logo-box"><span>Min. van I&W</span></div>
-      <div class="logo-box"><span>Waternet</span></div>
-      <div class="logo-box"><span>Stedin</span></div>
-      <div class="logo-box"><span>Alliander</span></div>
-      <div class="logo-box"><span>BAM</span></div>
-      <div class="logo-box"><span>VolkerWessels</span></div>
-      <div class="logo-box"><span>Heijmans</span></div>
-      <div class="logo-box"><span>GGD</span></div>
-      <div class="logo-box"><span>Schiphol</span></div>
-      <div class="logo-box"><span>Eneco</span></div>
-      <div class="logo-box"><span>Vitens</span></div>
-      <div class="logo-box"><span>TenneT</span></div>
-    </div>
-  </div>
+<!-- CASES -->
+<section class="cases" id="cases">
+<div class="container">
+<div class="cases-header">
+<span class="section-label fade-up">Cases</span>
+<h2 class="section-title fade-up d1">Onze Succesverhalen</h2>
+<p class="section-sub fade-up d2">Bekijk hoe wij bedrijven in verschillende branches hebben geholpen met meetbare resultaten.</p>
+</div>
+<div class="cases-grid">
+<div class="case-card fade-up">
+<div class="case-img"><div class="case-img-bg ci-1"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><span class="case-label">Case Study</span></div>
+<div class="case-body">
+<h3>Restaurant De Haven — Horeca</h3>
+<p>Complete digitale transformatie voor een Rotterdams horecabedrijf: van website tot social media en lokale SEO.</p>
+<div class="case-metrics">
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 45% Meer Organisch Verkeer</span>
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 60% Meer Reserveringen</span>
+</div>
+<a href="#" class="case-link">LEES MEER <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+</div>
+<div class="case-card fade-up d1">
+<div class="case-img"><div class="case-img-bg ci-2"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><span class="case-label">Case Study</span></div>
+<div class="case-body">
+<h3>ModaStore — E-commerce</h3>
+<p>SEO-strategie en Google Ads campagne voor een groeiende Nederlandse online fashion retailer.</p>
+<div class="case-metrics">
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 120% Meer Webshop Bezoekers</span>
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 30% Omzetstijging</span>
+</div>
+<a href="#" class="case-link">LEES MEER <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+</div>
+<div class="case-card fade-up d2">
+<div class="case-img"><div class="case-img-bg ci-3"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><span class="case-label">Case Study</span></div>
+<div class="case-body">
+<h3>Bakker &amp; Partners — Zakelijke Dienstverlening</h3>
+<p>B2B contentmarketing en LinkedIn strategie voor een Rotterdams consultancy bureau.</p>
+<div class="case-metrics">
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 85% Meer LinkedIn Leads</span>
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 50% Lagere CPL</span>
+</div>
+<a href="#" class="case-link">LEES MEER <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+</div>
+<div class="case-card fade-up d3">
+<div class="case-img"><div class="case-img-bg ci-4"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><span class="case-label">Case Study</span></div>
+<div class="case-body">
+<h3>Gezondheidscentrum Zuid — Gezondheidszorg</h3>
+<p>Website herontwerp en lokale SEO voor een gezondheidscentrum met meerdere locaties in Rotterdam-Zuid.</p>
+<div class="case-metrics">
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 200% Meer Online Afspraken</span>
+<span class="case-metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> #1 in Google Maps</span>
+</div>
+<a href="#" class="case-link">LEES MEER <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== CONTACT ========== -->
+<!-- BLOG -->
+<section class="blog" id="blog">
+<div class="container">
+<div class="blog-header">
+<span class="section-label fade-up">Blog</span>
+<h2 class="section-title fade-up d1">Laatste Inzichten</h2>
+<p class="section-sub fade-up d2">Tips, trends en strategieën om jouw online marketing naar het volgende niveau te tillen.</p>
+</div>
+<div class="blog-grid">
+<div class="blog-card fade-up">
+<div class="blog-img"><div class="blog-img-bg bi-1"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div></div>
+<div class="blog-body">
+<h3>SEO Trends 2026: Wat Verandert Er en Hoe Speel Je Erop In?</h3>
+<span class="blog-meta">8 min leestijd</span>
+</div>
+</div>
+<div class="blog-card fade-up d1">
+<div class="blog-img"><div class="blog-img-bg bi-2"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div></div>
+<div class="blog-body">
+<h3>Social Media Strategie voor MKB: De Complete Gids</h3>
+<span class="blog-meta">12 min leestijd</span>
+</div>
+</div>
+<div class="blog-card fade-up d2">
+<div class="blog-img"><div class="blog-img-bg bi-3"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div></div>
+<div class="blog-body">
+<h3>Content Marketing Tips: Zo Schrijf Je Content Die Converteert</h3>
+<span class="blog-meta">6 min leestijd</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="container">
+<div class="faq-header">
+<span class="section-label fade-up">FAQ</span>
+<h2 class="section-title fade-up d1">Veelgestelde Vragen</h2>
+<p class="section-sub fade-up d2">Antwoorden op de meest gestelde vragen over onze diensten en werkwijze.</p>
+</div>
+<div class="faq-columns">
+<div class="faq-col fade-up">
+<h3>Samenwerken met Allure Consultancy</h3>
+<div class="faq-item">
+<div class="faq-q">Welke diensten biedt Allure Consultancy aan?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Wij bieden een breed pakket aan digitale marketingdiensten: SEO &amp; vindbaarheid, content marketing, social media management, webdesign &amp; development, branding, en digitale strategie. Elk traject stemmen wij af op jouw specifieke doelen en budget.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Werken jullie met langlopende contracten?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Wij werken bij voorkeur met trajecten van minimaal 3 maanden, omdat marketing tijd nodig heeft om resultaat te laten zien. Echter, je zit nooit vast aan een langlopend contract. Wij geloven dat de resultaten voor zich spreken.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Hoe helpen jullie mijn bedrijf groeien?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Wij starten met een grondige analyse van jouw huidige situatie, markt en concurrenten. Op basis daarvan ontwikkelen wij een strategie op maat. Denk aan betere vindbaarheid in Google, meer leads via social media, een converterende website en sterke content die jouw expertise bewijst.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Waarom zou ik kiezen voor Allure Consultancy?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Wij combineren jarenlange ervaring met een data-gedreven aanpak. Je krijgt een vast aanspreekpunt, transparante rapportages en meetbare resultaten. Met meer dan 150 succesvolle projecten en een 5.0 Google rating spreken onze resultaten voor zich.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Maken jullie gebruik van AI in jullie werkwijze?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Ja, wij zetten AI-tools strategisch in om efficiënter te werken — denk aan data-analyse, contentoptimalisatie en trendonderzoek. Maar menselijke creativiteit en strategisch inzicht blijven altijd de basis. AI is een hulpmiddel, geen vervanging voor expertise.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Werken jullie alleen met bedrijven uit Rotterdam?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Nee, hoewel ons kantoor in Rotterdam gevestigd is, werken wij met bedrijven door heel Nederland. Dankzij videobellen en online samenwerkingstools maakt locatie niet uit. Wel hebben wij extra expertise in lokale marketing voor de regio Rotterdam.</div></div>
+</div>
+</div>
+<div class="faq-col fade-up d1">
+<h3>SEO &amp; Online Vindbaarheid</h3>
+<div class="faq-item">
+<div class="faq-q">Hoe lang duurt het voordat SEO resultaat oplevert?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">SEO is een langetermijn investering. De eerste resultaten zijn doorgaans zichtbaar na 3 tot 6 maanden, afhankelijk van de concurrentie in jouw branche en de huidige staat van je website. Wij sturen maandelijks rapportages zodat je de voortgang kunt volgen.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Kunnen jullie helpen met Google Maps / lokale vindbaarheid?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Absoluut! Lokale SEO is een van onze specialiteiten. Wij optimaliseren je Google Bedrijfsprofiel, zorgen voor consistente NAW-gegevens, stimuleren reviews en bouwen lokale autoriteit op. Dit is essentieel voor bedrijven die klanten uit hun regio willen aantrekken.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Mijn website scoort slecht in Google, wat kan ik doen?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+<div class="faq-a"><div class="faq-a-inner">Begin met een gratis adviesgesprek. Wij voeren een SEO-audit uit en identificeren de belangrijkste verbeterpunten: technische issues, content gaps, ontbrekende backlinks of problemen met de gebruikerservaring. Op basis hiervan maken wij een concreet actieplan.</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRUST MARQUEE -->
+<section class="trust">
+<div class="trust-header">
+<h3 class="fade-up">Vertrouwd Door</h3>
+<p class="fade-up d1">Bedrijven in Rotterdam en Daarbuiten</p>
+</div>
+<div class="marquee-wrap">
+<div class="marquee">
+<div class="logo-placeholder"><span>Horeca</span></div>
+<div class="logo-placeholder"><span>E-commerce</span></div>
+<div class="logo-placeholder"><span>Advocatuur</span></div>
+<div class="logo-placeholder"><span>Bouw</span></div>
+<div class="logo-placeholder"><span>Gezondheidszorg</span></div>
+<div class="logo-placeholder"><span>Retail</span></div>
+<div class="logo-placeholder"><span>Consultancy</span></div>
+<div class="logo-placeholder"><span>Technologie</span></div>
+<div class="logo-placeholder"><span>Vastgoed</span></div>
+<div class="logo-placeholder"><span>Logistiek</span></div>
+<div class="logo-placeholder"><span>Onderwijs</span></div>
+<div class="logo-placeholder"><span>Finance</span></div>
+<div class="logo-placeholder"><span>Horeca</span></div>
+<div class="logo-placeholder"><span>E-commerce</span></div>
+<div class="logo-placeholder"><span>Advocatuur</span></div>
+<div class="logo-placeholder"><span>Bouw</span></div>
+<div class="logo-placeholder"><span>Gezondheidszorg</span></div>
+<div class="logo-placeholder"><span>Retail</span></div>
+<div class="logo-placeholder"><span>Consultancy</span></div>
+<div class="logo-placeholder"><span>Technologie</span></div>
+<div class="logo-placeholder"><span>Vastgoed</span></div>
+<div class="logo-placeholder"><span>Logistiek</span></div>
+<div class="logo-placeholder"><span>Onderwijs</span></div>
+<div class="logo-placeholder"><span>Finance</span></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-form fade-up">
-        <h3>Stuur ons een bericht</h3>
-        <form onsubmit="return false">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="naam">Naam</label>
-              <input type="text" id="naam" placeholder="Uw volledige naam">
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="uw@email.nl">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="telefoon">Telefoon</label>
-              <input type="tel" id="telefoon" placeholder="06 - 1234 5678">
-            </div>
-            <div class="form-group">
-              <label for="onderwerp">Onderwerp</label>
-              <select id="onderwerp">
-                <option value="" disabled selected>Selecteer een onderwerp</option>
-                <option>Interne communicatie</option>
-                <option>Omgevingscommunicatie</option>
-                <option>Content & strategie</option>
-                <option>Allure Academy</option>
-                <option>Samenwerking</option>
-                <option>Anders</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group full">
-              <label for="bericht">Bericht</label>
-              <textarea id="bericht" placeholder="Waar kunnen wij u mee helpen?"></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn-submit">
-            Versturen
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-        </form>
-      </div>
-      <div class="contact-info fade-up d2">
-        <span class="section-label">Contact</span>
-        <h3>Wat kunnen we voor jou betekenen?</h3>
-        <p>Benieuwd hoe Allure Consultancy jouw organisatie kan helpen? Neem vrijblijvend contact op of plan direct een kennismakingsgesprek.</p>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <div class="cd-label">Adres</div>
-            <p>Maliebaan 72<br>3581 CV Utrecht</p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <div class="cd-label">Telefoon</div>
-            <a href="tel:+31302345678">030 - 234 5678</a>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <div class="cd-label">E-mail</div>
-            <a href="mailto:info@allureconsultancy.nl">info@allureconsultancy.nl</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="contact-grid">
+<div class="contact-form fade-up">
+<h3>Neem Contact Op</h3>
+<form onsubmit="return false">
+<div class="form-row">
+<div class="form-group"><label for="naam">Naam</label><input type="text" id="naam" placeholder="Uw naam"></div>
+<div class="form-group"><label for="telefoon">Telefoon</label><input type="tel" id="telefoon" placeholder="06 - 1234 5678"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="uw@email.nl"></div>
+<div class="form-group"><label for="bedrijf">Bedrijfsnaam</label><input type="text" id="bedrijf" placeholder="Uw bedrijf"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="website">Website URL</label><input type="url" id="website" placeholder="https://uwwebsite.nl"></div>
+<div class="form-group"><label for="dienst">Dienst</label>
+<select id="dienst"><option value="" disabled selected>Selecteer een dienst</option><option>SEO &amp; Vindbaarheid</option><option>Content Marketing</option><option>Social Media Management</option><option>Web Design &amp; Development</option><option>Branding</option><option>Digitale Strategie</option><option>Anders</option></select>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="budget">Budget</label>
+<select id="budget"><option value="" disabled selected>Selecteer budget range</option><option>&lt; €1.000 / maand</option><option>€1.000 - €2.500 / maand</option><option>€2.500 - €5.000 / maand</option><option>€5.000+ / maand</option><option>Eenmalig project</option></select>
+</div>
+<div class="form-group"></div>
+</div>
+<div class="form-row">
+<div class="form-group full"><label for="bericht">Bericht</label><textarea id="bericht" placeholder="Vertel ons over uw project en doelen..."></textarea></div>
+</div>
+<button type="submit" class="btn-submit">Verstuur Bericht <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+</form>
+</div>
+<div class="contact-info fade-up d2">
+<h3>Laten We Praten!</h3>
+<p>Klaar om jouw online aanwezigheid naar het volgende niveau te tillen? Neem vandaag nog contact met ons op voor een vrijblijvend adviesgesprek.</p>
+<div class="contact-detail">
+<div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div class="cd-text"><div class="cd-label">E-mail</div><a href="mailto:info@allureconsultancy.nl">info@allureconsultancy.nl</a></div>
+</div>
+<div class="contact-detail">
+<div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+<div class="cd-text"><div class="cd-label">Telefoon</div><a href="tel:0103140020">010-3140020</a></div>
+</div>
+<div class="contact-detail">
+<div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<div class="cd-text"><div class="cd-label">Adres</div><p>Mauritsstraat 56, 3012CJ Rotterdam</p></div>
+</div>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <svg viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 44 L32 8 L44 44" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="24" y1="32" x2="40" y2="32" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-            <path d="M32 8 Q48 4 48 16 Q48 24 40 26" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <circle cx="48" cy="16" r="2.5" fill="#C9953C"/>
-            <text x="60" y="32" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="#fff" letter-spacing="-0.5">Allure</text>
-            <text x="60" y="48" font-family="Inter,sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,.45)" letter-spacing="2">CONSULTANCY</text>
-          </svg>
-        </div>
-        <p>Specialist in verandercommunicatie, interne communicatie, omgevingscommunicatie en content strategie. Wij helpen organisaties effectief communiceren bij transities.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg>
-          </a>
-          <a href="#" aria-label="X / Twitter">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h4>Expertise</h4>
-        <ul>
-          <li><a href="#expertise">Interne Communicatie</a></li>
-          <li><a href="#expertise">Omgevingscommunicatie</a></li>
-          <li><a href="#expertise">Content &amp; Strategie</a></li>
-          <li><a href="#">Participatie</a></li>
-          <li><a href="#">Gedragsbeïnvloeding</a></li>
-          <li><a href="#">Allure Academy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Bedrijf</h4>
-        <ul>
-          <li><a href="#over-ons">Over ons</a></li>
-          <li><a href="#projecten">Projecten</a></li>
-          <li><a href="#inspiratie">Inspiratie</a></li>
-          <li><a href="#">Werkwijze</a></li>
-          <li><a href="#">Werken bij</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-newsletter">
-        <h4>Nieuwsbrief</h4>
-        <p>Ontvang maandelijks inspiratie over communicatie en verandering.</p>
-        <form class="newsletter-form" onsubmit="return false">
-          <input type="email" placeholder="Uw e-mailadres">
-          <button type="submit">Aanmelden</button>
-        </form>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Allure Consultancy B.V. Alle rechten voorbehouden.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacyvoorwaarden</a>
-        <a href="#">Cookieverklaring</a>
-        <a href="#">Disclaimer</a>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="footer-logo">
+<svg viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 48 L24 6 L40 48" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="14" y1="34" x2="34" y2="34" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M24 6 Q42 1 43 14 Q43.5 22 36 25" stroke="#C9953C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<circle cx="43" cy="14" r="3" fill="#C9953C"/>
+<text x="56" y="32" font-family="Inter,sans-serif" font-size="30" font-weight="700" fill="#fff" letter-spacing="-0.5">Allure</text>
+<text x="56" y="50" font-family="Inter,sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,.45)" letter-spacing="3">CONSULTANCY</text>
+</svg>
+</div>
+<p>Een data-gedreven marketing bureau in Rotterdam. Wij helpen bedrijven groeien met SEO, content, social media en webdesign.</p>
+<div class="footer-social">
+<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+</div>
+</div>
+<div>
+<h4>Menu</h4>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#diensten">Diensten</a></li>
+<li><a href="#over-ons">Over Ons</a></li>
+<li><a href="#werkwijze">Werkwijze</a></li>
+<li><a href="#cases">Cases</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Diensten</h4>
+<ul>
+<li><a href="#diensten">SEO &amp; Vindbaarheid</a></li>
+<li><a href="#diensten">Content Marketing</a></li>
+<li><a href="#diensten">Social Media</a></li>
+<li><a href="#diensten">Web Design</a></li>
+<li><a href="#diensten">Branding</a></li>
+<li><a href="#diensten">Digitale Strategie</a></li>
+</ul>
+</div>
+<div>
+<h4>Locatie</h4>
+<ul>
+<li><a href="mailto:info@allureconsultancy.nl">info@allureconsultancy.nl</a></li>
+<li><a href="tel:0103140020">010-3140020</a></li>
+<li>Mauritsstraat 56</li>
+<li>3012CJ Rotterdam</li>
+</ul>
+<div class="footer-social" style="margin-top:16px">
+<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Allure Consultancy | Alle rechten voorbehouden.</p>
+</div>
+</div>
 </footer>
 
-<!-- ========== JAVASCRIPT ========== -->
 <script>
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.pageYOffset > 60);
-}, { passive: true });
-
-// Update navbar logo colors when scrolled
-const logoObserver = new MutationObserver(() => {
-  const scrolled = navbar.classList.contains('scrolled');
-  const logoA = navbar.querySelector('.nav-logo svg path:first-child');
-  const logoLine = navbar.querySelector('.nav-logo svg line');
-  if (logoA) logoA.setAttribute('stroke', scrolled ? '#1A5C50' : '#fff');
-  if (logoLine) logoLine.setAttribute('stroke', scrolled ? '#1A5C50' : '#fff');
-  const texts = navbar.querySelectorAll('.nav-logo svg text');
-  if (texts[0]) texts[0].setAttribute('fill', scrolled ? '#1A5C50' : '#fff');
-  if (texts[1]) texts[1].setAttribute('fill', scrolled ? 'rgba(30,42,56,.5)' : 'rgba(255,255,255,.65)');
-});
-logoObserver.observe(navbar, { attributes: true, attributeFilter: ['class'] });
-
 // Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('open');
-  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',()=>{
+hamburger.classList.toggle('active');
+mobileMenu.classList.toggle('open');
+document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';
 });
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('open');
-    document.body.style.overflow = '';
-  });
+mobileMenu.querySelectorAll('a').forEach(a=>{
+a.addEventListener('click',()=>{
+hamburger.classList.remove('active');
+mobileMenu.classList.remove('open');
+document.body.style.overflow='';
+});
 });
 
-// Hero carousel
-const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.hero-dot');
-let currentSlide = 0;
-let slideInterval;
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',function(e){
+e.preventDefault();
+const t=document.querySelector(this.getAttribute('href'));
+if(t){const y=t.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:y,behavior:'smooth'});}
+});
+});
 
-function goToSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
-  currentSlide = n;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
+// Fade-up observer
+const fadeObs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>fadeObs.observe(el));
+
+// Count-up stats
+const statObs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+const el=e.target;
+const target=parseFloat(el.dataset.target);
+const isDecimal=el.dataset.decimal==='true';
+const suffix=el.closest('.stat-item').querySelector('.stat-label').textContent;
+let prefix='';let suf='';
+if(suffix.includes('Ervaring')){suf='+';prefix=''}
+else if(suffix.includes('Projecten')){suf='+';prefix=''}
+else if(suffix.includes('tevredenheid')){suf='%';prefix=''}
+else{suf='';prefix=''}
+const duration=2000;const start=performance.now();
+function update(now){
+const elapsed=now-start;const progress=Math.min(elapsed/duration,1);
+const eased=1-Math.pow(1-progress,3);
+let current=eased*target;
+if(isDecimal){el.textContent=prefix+current.toFixed(1)+suf;}
+else{el.textContent=prefix+Math.floor(current)+suf;}
+if(progress<1)requestAnimationFrame(update);
+else{if(isDecimal)el.textContent=prefix+target.toFixed(1)+suf;else el.textContent=prefix+Math.floor(target)+suf;}
 }
-
-function nextSlide() {
-  goToSlide((currentSlide + 1) % slides.length);
+requestAnimationFrame(update);
+statObs.unobserve(el);
 }
-
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    goToSlide(parseInt(dot.dataset.slide));
-    slideInterval = setInterval(nextSlide, 6000);
-  });
 });
+},{threshold:0.5});
+document.querySelectorAll('.stat-number[data-target]').forEach(el=>statObs.observe(el));
 
-slideInterval = setInterval(nextSlide, 6000);
+// Testimonials carousel
+const track=document.getElementById('carouselTrack');
+const dots=document.querySelectorAll('.carousel-dot');
+let currentSlide=0;const totalSlides=3;let autoTimer;
+function goTo(n){
+currentSlide=((n%totalSlides)+totalSlides)%totalSlides;
+track.style.transform='translateX(-'+currentSlide*100+'%)';
+dots.forEach((d,i)=>d.classList.toggle('active',i===currentSlide));
+}
+function next(){goTo(currentSlide+1);}
+function startAuto(){autoTimer=setInterval(next,5000);}
+function resetAuto(){clearInterval(autoTimer);startAuto();}
+document.getElementById('carouselNext').addEventListener('click',()=>{next();resetAuto();});
+document.getElementById('carouselPrev').addEventListener('click',()=>{goTo(currentSlide-1);resetAuto();});
+dots.forEach(d=>d.addEventListener('click',()=>{goTo(parseInt(d.dataset.index));resetAuto();}));
+startAuto();
 
-// IntersectionObserver for fade-up animations
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const offset = navbar.offsetHeight + 16;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+q.addEventListener('click',()=>{
+const item=q.parentElement;
+const answer=item.querySelector('.faq-a');
+const isOpen=item.classList.contains('open');
+// Close all in same column
+item.closest('.faq-col').querySelectorAll('.faq-item').forEach(fi=>{
+fi.classList.remove('open');
+fi.querySelector('.faq-a').style.maxHeight=null;
+});
+if(!isOpen){
+item.classList.add('open');
+answer.style.maxHeight=answer.scrollHeight+'px';
+}
+});
 });
 </script>
 </body>
